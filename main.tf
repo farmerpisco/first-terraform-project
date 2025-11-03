@@ -34,3 +34,8 @@ variable "server_port" {
   description = "The port the server will use for the HTTP requests"
   type        = number
 }
+
+output "public_ip" {
+  value       = aws_instance.test.public_ip
+  description = "The public IP address of the web server"
+}
